@@ -1,0 +1,7 @@
+﻿  game_flow.c
+D:\Project\PokerPoker\PokerPoker\game\game_flow.c(180,9): warning C4013: 'Fold'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+D:\Project\PokerPoker\PokerPoker\game\game_flow.c(184,9): warning C4013: 'Check'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+D:\Project\PokerPoker\PokerPoker\game\game_flow.c(188,9): warning C4013: 'Call'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+D:\Project\PokerPoker\PokerPoker\game\game_flow.c(192,9): warning C4013: 'Bet'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+D:\Project\PokerPoker\PokerPoker\game\game_flow.c(196,9): warning C4013: 'AllIn'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+  PokerPoker.vcxproj -> D:\Project\PokerPoker\x64\Debug\PokerPoker.exe

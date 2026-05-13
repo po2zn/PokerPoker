@@ -1,0 +1,721 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Project\\PokerPoker\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|D:\\Project\\PokerPoker\\PokerPoker\\game\\game_flow.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|solutionrelative:PokerPoker\\game\\game_flow.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|D:\\Project\\PokerPoker\\PokerPoker\\core\\game.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|solutionrelative:PokerPoker\\core\\game.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|D:\\Project\\PokerPoker\\PokerPoker\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|solutionrelative:PokerPoker\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|D:\\Project\\PokerPoker\\PokerPoker\\ui\\main_system_ui.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|solutionrelative:PokerPoker\\ui\\main_system_ui.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|D:\\Project\\PokerPoker\\PokerPoker\\ui\\main_system_ui.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|solutionrelative:PokerPoker\\ui\\main_system_ui.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|D:\\Project\\PokerPoker\\PokerPoker\\dealer\\dealer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|solutionrelative:PokerPoker\\dealer\\dealer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|D:\\Project\\PokerPoker\\PokerPoker\\enum\\ai_state.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|solutionrelative:PokerPoker\\enum\\ai_state.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|D:\\Project\\PokerPoker\\PokerPoker\\dealer\\dealer.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|solutionrelative:PokerPoker\\dealer\\dealer.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|D:\\Project\\PokerPoker\\PokerPoker\\AI\\ai_update.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|solutionrelative:PokerPoker\\AI\\ai_update.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|D:\\Project\\PokerPoker\\PokerPoker\\AI\\ai.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|solutionrelative:PokerPoker\\AI\\ai.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|D:\\Project\\PokerPoker\\PokerPoker\\poker\\betting_system.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|solutionrelative:PokerPoker\\poker\\betting_system.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|D:\\Project\\PokerPoker\\PokerPoker\\poker\\betting_system.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|solutionrelative:PokerPoker\\poker\\betting_system.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|D:\\Project\\PokerPoker\\PokerPoker\\game\\game_flow.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|solutionrelative:PokerPoker\\game\\game_flow.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|D:\\Project\\PokerPoker\\PokerPoker\\AI\\ai_update.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|solutionrelative:PokerPoker\\AI\\ai_update.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|D:\\Project\\PokerPoker\\PokerPoker\\data\\card_printer.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|solutionrelative:PokerPoker\\data\\card_printer.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|D:\\Project\\PokerPoker\\PokerPoker\\AI\\ai.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|solutionrelative:PokerPoker\\AI\\ai.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|D:\\Project\\PokerPoker\\PokerPoker\\enum\\action_type.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|solutionrelative:PokerPoker\\enum\\action_type.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|D:\\Project\\PokerPoker\\PokerPoker\\data\\table.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|solutionrelative:PokerPoker\\data\\table.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|D:\\Project\\PokerPoker\\PokerPoker\\data\\table.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|solutionrelative:PokerPoker\\data\\table.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|D:\\Project\\PokerPoker\\PokerPoker\\data\\player.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|solutionrelative:PokerPoker\\data\\player.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|D:\\Project\\PokerPoker\\PokerPoker\\data\\deck.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|solutionrelative:PokerPoker\\data\\deck.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|D:\\Project\\PokerPoker\\PokerPoker\\data\\deck.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|solutionrelative:PokerPoker\\data\\deck.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|D:\\Project\\PokerPoker\\PokerPoker\\data\\card_string.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|solutionrelative:PokerPoker\\data\\card_string.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|D:\\Project\\PokerPoker\\PokerPoker\\AI\\win_rate_calculator.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|solutionrelative:PokerPoker\\AI\\win_rate_calculator.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|D:\\Project\\PokerPoker\\PokerPoker\\poker\\hand_evaluator.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|solutionrelative:PokerPoker\\poker\\hand_evaluator.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|D:\\Project\\PokerPoker\\PokerPoker\\poker\\hand_evaluator.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|solutionrelative:PokerPoker\\poker\\hand_evaluator.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|D:\\Project\\PokerPoker\\PokerPoker\\game\\turn_system.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|solutionrelative:PokerPoker\\game\\turn_system.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|D:\\Project\\PokerPoker\\PokerPoker\\scene\\menu_scene.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|solutionrelative:PokerPoker\\scene\\menu_scene.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|D:\\Project\\PokerPoker\\PokerPoker\\poker\\hand_rank.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|solutionrelative:PokerPoker\\poker\\hand_rank.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|D:\\Project\\PokerPoker\\PokerPoker\\data\\player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|solutionrelative:PokerPoker\\data\\player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|D:\\Project\\PokerPoker\\PokerPoker\\data\\card_string.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|solutionrelative:PokerPoker\\data\\card_string.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|D:\\Project\\PokerPoker\\PokerPoker\\data\\card_printer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|solutionrelative:PokerPoker\\data\\card_printer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|D:\\Project\\PokerPoker\\PokerPoker\\AI\\win_rate_calculator.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|solutionrelative:PokerPoker\\AI\\win_rate_calculator.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|D:\\Project\\PokerPoker\\PokerPoker\\system\\renderer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|solutionrelative:PokerPoker\\system\\renderer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|D:\\Project\\PokerPoker\\PokerPoker\\core\\game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|solutionrelative:PokerPoker\\core\\game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|D:\\Project\\PokerPoker\\PokerPoker\\resource\\logo.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|solutionrelative:PokerPoker\\resource\\logo.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|D:\\Project\\PokerPoker\\PokerPoker\\data\\card.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|solutionrelative:PokerPoker\\data\\card.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|D:\\Project\\PokerPoker\\PokerPoker\\system\\renderer.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|solutionrelative:PokerPoker\\system\\renderer.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|D:\\Project\\PokerPoker\\PokerPoker\\system\\input.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|solutionrelative:PokerPoker\\system\\input.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|D:\\Project\\PokerPoker\\PokerPoker\\system\\input.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|solutionrelative:PokerPoker\\system\\input.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|D:\\Project\\PokerPoker\\PokerPoker\\system\\console.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|solutionrelative:PokerPoker\\system\\console.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|D:\\Project\\PokerPoker\\PokerPoker\\system\\console.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|solutionrelative:PokerPoker\\system\\console.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|D:\\Project\\PokerPoker\\PokerPoker\\scene\\menu_scene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3A152701-8101-4325-82B6-9AD0E6817B11}|PokerPoker.vcxproj|solutionrelative:PokerPoker\\scene\\menu_scene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 17,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ai_update.c",
+              "DocumentMoniker": "D:\\Project\\PokerPoker\\PokerPoker\\AI\\ai_update.c",
+              "RelativeDocumentMoniker": "PokerPoker\\AI\\ai_update.c",
+              "ToolTip": "D:\\Project\\PokerPoker\\PokerPoker\\AI\\ai_update.c",
+              "RelativeToolTip": "PokerPoker\\AI\\ai_update.c",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAAABsAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2026-05-10T18:59:56.486Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ai_update.h",
+              "DocumentMoniker": "D:\\Project\\PokerPoker\\PokerPoker\\AI\\ai_update.h",
+              "RelativeDocumentMoniker": "PokerPoker\\AI\\ai_update.h",
+              "ToolTip": "D:\\Project\\PokerPoker\\PokerPoker\\AI\\ai_update.h",
+              "RelativeToolTip": "PokerPoker\\AI\\ai_update.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-05-10T18:59:12.091Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "win_rate_calculator.c",
+              "DocumentMoniker": "D:\\Project\\PokerPoker\\PokerPoker\\AI\\win_rate_calculator.c",
+              "RelativeDocumentMoniker": "PokerPoker\\AI\\win_rate_calculator.c",
+              "ToolTip": "D:\\Project\\PokerPoker\\PokerPoker\\AI\\win_rate_calculator.c",
+              "RelativeToolTip": "PokerPoker\\AI\\win_rate_calculator.c",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAAwHoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2026-05-10T18:35:36.588Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "win_rate_calculator.h",
+              "DocumentMoniker": "D:\\Project\\PokerPoker\\PokerPoker\\AI\\win_rate_calculator.h",
+              "RelativeDocumentMoniker": "PokerPoker\\AI\\win_rate_calculator.h",
+              "ToolTip": "D:\\Project\\PokerPoker\\PokerPoker\\AI\\win_rate_calculator.h",
+              "RelativeToolTip": "PokerPoker\\AI\\win_rate_calculator.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-05-10T18:35:20.516Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "turn_system.h",
+              "DocumentMoniker": "D:\\Project\\PokerPoker\\PokerPoker\\game\\turn_system.h",
+              "RelativeDocumentMoniker": "PokerPoker\\game\\turn_system.h",
+              "ToolTip": "D:\\Project\\PokerPoker\\PokerPoker\\game\\turn_system.h",
+              "RelativeToolTip": "PokerPoker\\game\\turn_system.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-05-09T17:16:20.598Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "card_printer.h",
+              "DocumentMoniker": "D:\\Project\\PokerPoker\\PokerPoker\\data\\card_printer.h",
+              "RelativeDocumentMoniker": "PokerPoker\\data\\card_printer.h",
+              "ToolTip": "D:\\Project\\PokerPoker\\PokerPoker\\data\\card_printer.h",
+              "RelativeToolTip": "PokerPoker\\data\\card_printer.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-05-09T14:34:52.486Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "card_printer.c",
+              "DocumentMoniker": "D:\\Project\\PokerPoker\\PokerPoker\\data\\card_printer.c",
+              "RelativeDocumentMoniker": "PokerPoker\\data\\card_printer.c",
+              "ToolTip": "D:\\Project\\PokerPoker\\PokerPoker\\data\\card_printer.c",
+              "RelativeToolTip": "PokerPoker\\data\\card_printer.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2026-05-09T14:34:24.317Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "card_string.c",
+              "DocumentMoniker": "D:\\Project\\PokerPoker\\PokerPoker\\data\\card_string.c",
+              "RelativeDocumentMoniker": "PokerPoker\\data\\card_string.c",
+              "ToolTip": "D:\\Project\\PokerPoker\\PokerPoker\\data\\card_string.c",
+              "RelativeToolTip": "PokerPoker\\data\\card_string.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2026-05-09T14:28:26.424Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "card_string.h",
+              "DocumentMoniker": "D:\\Project\\PokerPoker\\PokerPoker\\data\\card_string.h",
+              "RelativeDocumentMoniker": "PokerPoker\\data\\card_string.h",
+              "ToolTip": "D:\\Project\\PokerPoker\\PokerPoker\\data\\card_string.h",
+              "RelativeToolTip": "PokerPoker\\data\\card_string.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-05-09T14:28:16.065Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "game_flow.h",
+              "DocumentMoniker": "D:\\Project\\PokerPoker\\PokerPoker\\game\\game_flow.h",
+              "RelativeDocumentMoniker": "PokerPoker\\game\\game_flow.h",
+              "ToolTip": "D:\\Project\\PokerPoker\\PokerPoker\\game\\game_flow.h",
+              "RelativeToolTip": "PokerPoker\\game\\game_flow.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-05-09T09:47:41.899Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "hand_evaluator.c",
+              "DocumentMoniker": "D:\\Project\\PokerPoker\\PokerPoker\\poker\\hand_evaluator.c",
+              "RelativeDocumentMoniker": "PokerPoker\\poker\\hand_evaluator.c",
+              "ToolTip": "D:\\Project\\PokerPoker\\PokerPoker\\poker\\hand_evaluator.c",
+              "RelativeToolTip": "PokerPoker\\poker\\hand_evaluator.c",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADMAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2026-05-09T08:11:53.42Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "hand_evaluator.h",
+              "DocumentMoniker": "D:\\Project\\PokerPoker\\PokerPoker\\poker\\hand_evaluator.h",
+              "RelativeDocumentMoniker": "PokerPoker\\poker\\hand_evaluator.h",
+              "ToolTip": "D:\\Project\\PokerPoker\\PokerPoker\\poker\\hand_evaluator.h",
+              "RelativeToolTip": "PokerPoker\\poker\\hand_evaluator.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-05-09T08:11:36.215Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "hand_rank.h",
+              "DocumentMoniker": "D:\\Project\\PokerPoker\\PokerPoker\\poker\\hand_rank.h",
+              "RelativeDocumentMoniker": "PokerPoker\\poker\\hand_rank.h",
+              "ToolTip": "D:\\Project\\PokerPoker\\PokerPoker\\poker\\hand_rank.h",
+              "RelativeToolTip": "PokerPoker\\poker\\hand_rank.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-05-09T08:11:19.566Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ai.c",
+              "DocumentMoniker": "D:\\Project\\PokerPoker\\PokerPoker\\AI\\ai.c",
+              "RelativeDocumentMoniker": "PokerPoker\\AI\\ai.c",
+              "ToolTip": "D:\\Project\\PokerPoker\\PokerPoker\\AI\\ai.c",
+              "RelativeToolTip": "PokerPoker\\AI\\ai.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAANkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2026-05-09T08:05:24.966Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ai_state.h",
+              "DocumentMoniker": "D:\\Project\\PokerPoker\\PokerPoker\\enum\\ai_state.h",
+              "RelativeDocumentMoniker": "PokerPoker\\enum\\ai_state.h",
+              "ToolTip": "D:\\Project\\PokerPoker\\PokerPoker\\enum\\ai_state.h",
+              "RelativeToolTip": "PokerPoker\\enum\\ai_state.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-05-09T08:04:02.187Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "action_type.h",
+              "DocumentMoniker": "D:\\Project\\PokerPoker\\PokerPoker\\enum\\action_type.h",
+              "RelativeDocumentMoniker": "PokerPoker\\enum\\action_type.h",
+              "ToolTip": "D:\\Project\\PokerPoker\\PokerPoker\\enum\\action_type.h",
+              "RelativeToolTip": "PokerPoker\\enum\\action_type.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-05-09T08:03:53.618Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ai.h",
+              "DocumentMoniker": "D:\\Project\\PokerPoker\\PokerPoker\\AI\\ai.h",
+              "RelativeDocumentMoniker": "PokerPoker\\AI\\ai.h",
+              "ToolTip": "D:\\Project\\PokerPoker\\PokerPoker\\AI\\ai.h",
+              "RelativeToolTip": "PokerPoker\\AI\\ai.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-05-09T08:03:26.934Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "game_flow.c",
+              "DocumentMoniker": "D:\\Project\\PokerPoker\\PokerPoker\\game\\game_flow.c",
+              "RelativeDocumentMoniker": "PokerPoker\\game\\game_flow.c",
+              "ToolTip": "D:\\Project\\PokerPoker\\PokerPoker\\game\\game_flow.c",
+              "RelativeToolTip": "PokerPoker\\game\\game_flow.c",
+              "ViewState": "AgIAAM4AAAAAAAAAAAAAAOcAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2026-05-09T06:45:09.589Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "dealer.c",
+              "DocumentMoniker": "D:\\Project\\PokerPoker\\PokerPoker\\dealer\\dealer.c",
+              "RelativeDocumentMoniker": "PokerPoker\\dealer\\dealer.c",
+              "ToolTip": "D:\\Project\\PokerPoker\\PokerPoker\\dealer\\dealer.c",
+              "RelativeToolTip": "PokerPoker\\dealer\\dealer.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2026-05-09T06:43:25.421Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "deck.c",
+              "DocumentMoniker": "D:\\Project\\PokerPoker\\PokerPoker\\data\\deck.c",
+              "RelativeDocumentMoniker": "PokerPoker\\data\\deck.c",
+              "ToolTip": "D:\\Project\\PokerPoker\\PokerPoker\\data\\deck.c",
+              "RelativeToolTip": "PokerPoker\\data\\deck.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2026-05-09T06:38:43.34Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "dealer.h",
+              "DocumentMoniker": "D:\\Project\\PokerPoker\\PokerPoker\\dealer\\dealer.h",
+              "RelativeDocumentMoniker": "PokerPoker\\dealer\\dealer.h",
+              "ToolTip": "D:\\Project\\PokerPoker\\PokerPoker\\dealer\\dealer.h",
+              "RelativeToolTip": "PokerPoker\\dealer\\dealer.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-05-09T06:36:19.805Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "deck.h",
+              "DocumentMoniker": "D:\\Project\\PokerPoker\\PokerPoker\\data\\deck.h",
+              "RelativeDocumentMoniker": "PokerPoker\\data\\deck.h",
+              "ToolTip": "D:\\Project\\PokerPoker\\PokerPoker\\data\\deck.h",
+              "RelativeToolTip": "PokerPoker\\data\\deck.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-05-09T06:35:24.161Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "card.h",
+              "DocumentMoniker": "D:\\Project\\PokerPoker\\PokerPoker\\data\\card.h",
+              "RelativeDocumentMoniker": "PokerPoker\\data\\card.h",
+              "ToolTip": "D:\\Project\\PokerPoker\\PokerPoker\\data\\card.h",
+              "RelativeToolTip": "PokerPoker\\data\\card.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-05-09T06:35:06.49Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "betting_system.c",
+              "DocumentMoniker": "D:\\Project\\PokerPoker\\PokerPoker\\poker\\betting_system.c",
+              "RelativeDocumentMoniker": "PokerPoker\\poker\\betting_system.c",
+              "ToolTip": "D:\\Project\\PokerPoker\\PokerPoker\\poker\\betting_system.c",
+              "RelativeToolTip": "PokerPoker\\poker\\betting_system.c",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAGsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2026-05-09T06:25:11.382Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "table.c",
+              "DocumentMoniker": "D:\\Project\\PokerPoker\\PokerPoker\\data\\table.c",
+              "RelativeDocumentMoniker": "PokerPoker\\data\\table.c",
+              "ToolTip": "D:\\Project\\PokerPoker\\PokerPoker\\data\\table.c",
+              "RelativeToolTip": "PokerPoker\\data\\table.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2026-05-09T06:24:00.162Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "table.h",
+              "DocumentMoniker": "D:\\Project\\PokerPoker\\PokerPoker\\data\\table.h",
+              "RelativeDocumentMoniker": "PokerPoker\\data\\table.h",
+              "ToolTip": "D:\\Project\\PokerPoker\\PokerPoker\\data\\table.h",
+              "RelativeToolTip": "PokerPoker\\data\\table.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-05-09T06:23:20.43Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "betting_system.h",
+              "DocumentMoniker": "D:\\Project\\PokerPoker\\PokerPoker\\poker\\betting_system.h",
+              "RelativeDocumentMoniker": "PokerPoker\\poker\\betting_system.h",
+              "ToolTip": "D:\\Project\\PokerPoker\\PokerPoker\\poker\\betting_system.h",
+              "RelativeToolTip": "PokerPoker\\poker\\betting_system.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-05-09T06:22:50.823Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "player.c",
+              "DocumentMoniker": "D:\\Project\\PokerPoker\\PokerPoker\\data\\player.c",
+              "RelativeDocumentMoniker": "PokerPoker\\data\\player.c",
+              "ToolTip": "D:\\Project\\PokerPoker\\PokerPoker\\data\\player.c",
+              "RelativeToolTip": "PokerPoker\\data\\player.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2026-05-09T06:16:07.583Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "player.h",
+              "DocumentMoniker": "D:\\Project\\PokerPoker\\PokerPoker\\data\\player.h",
+              "RelativeDocumentMoniker": "PokerPoker\\data\\player.h",
+              "ToolTip": "D:\\Project\\PokerPoker\\PokerPoker\\data\\player.h",
+              "RelativeToolTip": "PokerPoker\\data\\player.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-05-09T06:15:42.533Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "main_system_ui.c",
+              "DocumentMoniker": "D:\\Project\\PokerPoker\\PokerPoker\\ui\\main_system_ui.c",
+              "RelativeDocumentMoniker": "PokerPoker\\ui\\main_system_ui.c",
+              "ToolTip": "D:\\Project\\PokerPoker\\PokerPoker\\ui\\main_system_ui.c",
+              "RelativeToolTip": "PokerPoker\\ui\\main_system_ui.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFEAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2026-05-09T06:06:02.688Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "main_system_ui.h",
+              "DocumentMoniker": "D:\\Project\\PokerPoker\\PokerPoker\\ui\\main_system_ui.h",
+              "RelativeDocumentMoniker": "PokerPoker\\ui\\main_system_ui.h",
+              "ToolTip": "D:\\Project\\PokerPoker\\PokerPoker\\ui\\main_system_ui.h",
+              "RelativeToolTip": "PokerPoker\\ui\\main_system_ui.h",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-05-09T06:05:55.043Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "renderer.c",
+              "DocumentMoniker": "D:\\Project\\PokerPoker\\PokerPoker\\system\\renderer.c",
+              "RelativeDocumentMoniker": "PokerPoker\\system\\renderer.c",
+              "ToolTip": "D:\\Project\\PokerPoker\\PokerPoker\\system\\renderer.c",
+              "RelativeToolTip": "PokerPoker\\system\\renderer.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2026-05-09T05:48:41.487Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "logo.h",
+              "DocumentMoniker": "D:\\Project\\PokerPoker\\PokerPoker\\resource\\logo.h",
+              "RelativeDocumentMoniker": "PokerPoker\\resource\\logo.h",
+              "ToolTip": "D:\\Project\\PokerPoker\\PokerPoker\\resource\\logo.h",
+              "RelativeToolTip": "PokerPoker\\resource\\logo.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-05-09T05:47:47.908Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "renderer.h",
+              "DocumentMoniker": "D:\\Project\\PokerPoker\\PokerPoker\\system\\renderer.h",
+              "RelativeDocumentMoniker": "PokerPoker\\system\\renderer.h",
+              "ToolTip": "D:\\Project\\PokerPoker\\PokerPoker\\system\\renderer.h",
+              "RelativeToolTip": "PokerPoker\\system\\renderer.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-05-09T05:47:22.349Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "console.c",
+              "DocumentMoniker": "D:\\Project\\PokerPoker\\PokerPoker\\system\\console.c",
+              "RelativeDocumentMoniker": "PokerPoker\\system\\console.c",
+              "ToolTip": "D:\\Project\\PokerPoker\\PokerPoker\\system\\console.c",
+              "RelativeToolTip": "PokerPoker\\system\\console.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2026-05-09T05:39:21.635Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "input.c",
+              "DocumentMoniker": "D:\\Project\\PokerPoker\\PokerPoker\\system\\input.c",
+              "RelativeDocumentMoniker": "PokerPoker\\system\\input.c",
+              "ToolTip": "D:\\Project\\PokerPoker\\PokerPoker\\system\\input.c",
+              "RelativeToolTip": "PokerPoker\\system\\input.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2026-05-09T05:38:50.24Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "menu_scene.c",
+              "DocumentMoniker": "D:\\Project\\PokerPoker\\PokerPoker\\scene\\menu_scene.c",
+              "RelativeDocumentMoniker": "PokerPoker\\scene\\menu_scene.c",
+              "ToolTip": "D:\\Project\\PokerPoker\\PokerPoker\\scene\\menu_scene.c",
+              "RelativeToolTip": "PokerPoker\\scene\\menu_scene.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2026-05-09T05:38:29.805Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "game.c",
+              "DocumentMoniker": "D:\\Project\\PokerPoker\\PokerPoker\\core\\game.c",
+              "RelativeDocumentMoniker": "PokerPoker\\core\\game.c",
+              "ToolTip": "D:\\Project\\PokerPoker\\PokerPoker\\core\\game.c",
+              "RelativeToolTip": "PokerPoker\\core\\game.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2026-05-09T05:38:22.881Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "game.h",
+              "DocumentMoniker": "D:\\Project\\PokerPoker\\PokerPoker\\core\\game.h",
+              "RelativeDocumentMoniker": "PokerPoker\\core\\game.h",
+              "ToolTip": "D:\\Project\\PokerPoker\\PokerPoker\\core\\game.h",
+              "RelativeToolTip": "PokerPoker\\core\\game.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-05-09T05:38:13.382Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "console.h",
+              "DocumentMoniker": "D:\\Project\\PokerPoker\\PokerPoker\\system\\console.h",
+              "RelativeDocumentMoniker": "PokerPoker\\system\\console.h",
+              "ToolTip": "D:\\Project\\PokerPoker\\PokerPoker\\system\\console.h",
+              "RelativeToolTip": "PokerPoker\\system\\console.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-05-09T05:37:32.826Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "menu_scene.h",
+              "DocumentMoniker": "D:\\Project\\PokerPoker\\PokerPoker\\scene\\menu_scene.h",
+              "RelativeDocumentMoniker": "PokerPoker\\scene\\menu_scene.h",
+              "ToolTip": "D:\\Project\\PokerPoker\\PokerPoker\\scene\\menu_scene.h",
+              "RelativeToolTip": "PokerPoker\\scene\\menu_scene.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-05-09T05:37:17.934Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "input.h",
+              "DocumentMoniker": "D:\\Project\\PokerPoker\\PokerPoker\\system\\input.h",
+              "RelativeDocumentMoniker": "PokerPoker\\system\\input.h",
+              "ToolTip": "D:\\Project\\PokerPoker\\PokerPoker\\system\\input.h",
+              "RelativeToolTip": "PokerPoker\\system\\input.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-05-09T05:36:55.462Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "main.c",
+              "DocumentMoniker": "D:\\Project\\PokerPoker\\PokerPoker\\main.c",
+              "RelativeDocumentMoniker": "PokerPoker\\main.c",
+              "ToolTip": "D:\\Project\\PokerPoker\\PokerPoker\\main.c",
+              "RelativeToolTip": "PokerPoker\\main.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2026-05-09T05:21:38.115Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
