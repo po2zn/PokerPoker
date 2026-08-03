@@ -4,7 +4,7 @@
 
 typedef enum
 {
-    SPADE,
+    SPADE = 0,
     HEART,
     DIAMOND,
     CLUB

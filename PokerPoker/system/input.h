@@ -4,5 +4,5 @@
 
 void WaitAnyKey();
 char GetInputKey();
-
+int SetSettings();
 #endif

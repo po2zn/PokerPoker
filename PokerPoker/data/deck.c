@@ -10,7 +10,7 @@ void InitializeDeck(Deck* deck)
     {
         for (int number = 1; number <= 13; number++)
         {
-            deck->cards[index].suit = suit;
+            deck->cards[index].suit = (Suit)suit;
             deck->cards[index].number = number;
 
             index++;
@@ -20,7 +20,7 @@ void InitializeDeck(Deck* deck)
     deck->topIndex = 0;
 }
 
-void ShuffleDeck(Deck* deck) // bubble
+void ShuffleDeck(Deck* deck)
 {
     // TODO : 혹시 모르니 나중에 다른 곳으로 옮겨야 할 수도 있음.
     // 아직까지는 정상 작동
@@ -38,5 +38,17 @@ void ShuffleDeck(Deck* deck) // bubble
 
 Card DrawCard(Deck* deck)
 {
+    Card invalid = { SPADE, 1 };
+
+    if (deck == NULL)
+    {
+        return invalid;
+    }
+
+    if (deck->topIndex >= DECK_SIZE)
+    {
+        return invalid;
+    }
+
     return deck->cards[deck->topIndex++];
 }

@@ -1,48 +1,22 @@
 ﻿#include "card_string.h"
+#include "stdio.h"
 
 const char* GetCardNumberString(int number)
 {
-    switch (number)
+    static const char* Cardnumbers[] = {"?", "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"};
+
+    if (number < 1 || number > 13)
     {
-        case 1:
-            return "A";
-
-        case 11:
-            return "J";
-
-        case 12:
-            return "Q";
-
-        case 13:
-            return "K";
-
-        default:
-        {
-            static char buffer[3];
-
-            sprintf_s(buffer, sizeof(buffer), "%d", number);
-
-            return buffer;
-        }
+        return "?";
     }
+
+    const char* result = Cardnumbers[number];
+    return result != NULL ? result : "?";
 }
 
 const char* GetCardSuitString(int suit)
 {
-    switch (suit)
-    {
-    case 0:
-        return "♠";
-
-    case 1:
-        return "♥";
-
-    case 2:
-        return "◆";
-
-    case 3:
-        return "♣";
-    }
-
-    return "?";
+    static const char* suits[] = { "♠", "♥", "◆", "♣" };
+    if (suit < 0 || suit > 3) return "?";
+    return suits[suit];
 }

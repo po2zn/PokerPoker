@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -126,6 +126,7 @@
     <ClCompile Include="PokerPoker\AI\ai.c" />
     <ClCompile Include="PokerPoker\AI\ai_update.c" />
     <ClCompile Include="PokerPoker\AI\win_rate_calculator.c" />
+    <ClCompile Include="PokerPoker\audio\audio.c" />
     <ClCompile Include="PokerPoker\core\game.c" />
     <ClCompile Include="PokerPoker\data\card_printer.c" />
     <ClCompile Include="PokerPoker\data\card_string.c" />
@@ -133,21 +134,33 @@
     <ClCompile Include="PokerPoker\data\player.c" />
     <ClCompile Include="PokerPoker\data\table.c" />
     <ClCompile Include="PokerPoker\dealer\dealer.c" />
+    <ClCompile Include="PokerPoker\game\card_swap.c" />
     <ClCompile Include="PokerPoker\game\game_flow.c" />
     <ClCompile Include="PokerPoker\game\turn_system.c" />
     <ClCompile Include="PokerPoker\main.c" />
     <ClCompile Include="PokerPoker\poker\betting_system.c" />
     <ClCompile Include="PokerPoker\poker\hand_evaluator.c" />
+    <ClCompile Include="PokerPoker\renderer\card_renderer.c" />
+    <ClCompile Include="PokerPoker\renderer\log_renderer.c" />
+    <ClCompile Include="PokerPoker\renderer\screen_buffer.c" />
+    <ClCompile Include="PokerPoker\renderer\table_renderer.c" />
     <ClCompile Include="PokerPoker\scene\menu_scene.c" />
+    <ClCompile Include="PokerPoker\shop\coin.c" />
+    <ClCompile Include="PokerPoker\shop\shop.c" />
+    <ClCompile Include="PokerPoker\shop\shop_effect.c" />
+    <ClCompile Include="PokerPoker\shop\shop_inventory.c" />
     <ClCompile Include="PokerPoker\system\console.c" />
+    <ClCompile Include="PokerPoker\system\game_log.c" />
     <ClCompile Include="PokerPoker\system\input.c" />
-    <ClCompile Include="PokerPoker\system\renderer.c" />
+    <ClCompile Include="PokerPoker\renderer\renderer.c" />
     <ClCompile Include="PokerPoker\ui\main_system_ui.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="PokerPoker\AI\ai.h" />
     <ClInclude Include="PokerPoker\AI\ai_update.h" />
     <ClInclude Include="PokerPoker\AI\win_rate_calculator.h" />
+    <ClInclude Include="PokerPoker\audio\audio.h" />
+    <ClInclude Include="PokerPoker\audio\sound_type.h" />
     <ClInclude Include="PokerPoker\core\game.h" />
     <ClInclude Include="PokerPoker\data\card.h" />
     <ClInclude Include="PokerPoker\data\card_printer.h" />
@@ -158,16 +171,28 @@
     <ClInclude Include="PokerPoker\dealer\dealer.h" />
     <ClInclude Include="PokerPoker\enum\action_type.h" />
     <ClInclude Include="PokerPoker\enum\ai_state.h" />
+    <ClInclude Include="PokerPoker\enum\log_type.h" />
+    <ClInclude Include="PokerPoker\game\card_swap.h" />
     <ClInclude Include="PokerPoker\game\game_flow.h" />
     <ClInclude Include="PokerPoker\game\turn_system.h" />
     <ClInclude Include="PokerPoker\poker\betting_system.h" />
     <ClInclude Include="PokerPoker\poker\hand_evaluator.h" />
     <ClInclude Include="PokerPoker\poker\hand_rank.h" />
+    <ClInclude Include="PokerPoker\renderer\card_renderer.h" />
+    <ClInclude Include="PokerPoker\renderer\log_renderer.h" />
+    <ClInclude Include="PokerPoker\renderer\screen_buffer.h" />
+    <ClInclude Include="PokerPoker\renderer\table_renderer.h" />
     <ClInclude Include="PokerPoker\resource\logo.h" />
     <ClInclude Include="PokerPoker\scene\menu_scene.h" />
+    <ClInclude Include="PokerPoker\shop\coin.h" />
+    <ClInclude Include="PokerPoker\shop\item.h" />
+    <ClInclude Include="PokerPoker\shop\shop.h" />
+    <ClInclude Include="PokerPoker\shop\shop_effect.h" />
+    <ClInclude Include="PokerPoker\shop\shop_inventory.h" />
     <ClInclude Include="PokerPoker\system\console.h" />
+    <ClInclude Include="PokerPoker\system\game_log.h" />
     <ClInclude Include="PokerPoker\system\input.h" />
-    <ClInclude Include="PokerPoker\system\renderer.h" />
+    <ClInclude Include="PokerPoker\renderer\renderer.h" />
     <ClInclude Include="PokerPoker\ui\main_system_ui.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

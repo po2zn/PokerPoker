@@ -1,8 +1,19 @@
 #include "dealer.h"
+#include "../shop/shop_inventory.h"
 
 void DealCards(Deck* deck, Player* player)
 {
-    for (int i = 0; i < 2; i++)
+    int cardCount = 2;
+
+    // 플레이어만 적용
+    if (!IsAI(player) && gInventory.isUnderDraw)
+    {
+        cardCount = 3;
+    }
+
+    player->handCardCount = cardCount;
+
+    for (int i = 0; i < cardCount; i++)
     {
         player->hand[i] = DrawCard(deck);
     }

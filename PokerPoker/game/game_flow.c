@@ -1,4 +1,8 @@
 #include <stdio.h>
+#include <conio.h>
+#include <stdlib.h>
+
+#include "../audio/audio.h"
 
 #include "../ai/ai.h"
 #include "../ai/ai_update.h"
@@ -11,15 +15,29 @@
 #include "../dealer/dealer.h"
 
 #include "../poker/hand_evaluator.h"
+#include "../poker/betting_system.h"
 
 #include "../enum/action_type.h"
 
-static ActionType PlayerTurn(Player* player, Table* table);
-static void ApplyAIAction(AIContext *ai, Player *aiPlayer, Table *table);
+#include "../renderer/renderer.h"
+#include "../renderer/screen_buffer.h"
 
-void ShowCommunityCards(Table* table)
+#include "../system/input.h"
+#include "../system/game_log.h"
+
+#include "../shop/shop.h"
+#include "../shop/shop_effect.h"
+#include "../shop/coin.h"
+#include "../shop/shop_inventory.h"
+
+#include "card_swap.h"
+
+static ActionType PlayerTurn(Player* player, Player *aiPlayer, Table* table, Deck* deck, GameLog *log);
+static void ApplyAIAction(AIContext *ai, Player *aiPlayer, Table *table, GameLog *log);
+// 임시
+void ShowCommunityCards(Table* table, GameLog *log)
 {
-    printf("\n=== Community Cards ===\n");
+    AddLog(log, LOG_SYSTEM, "=== Community Cards ===");
 
     for (int i = 0; i < table->revealedCardCount; i++)
     {
@@ -29,12 +47,12 @@ void ShowCommunityCards(Table* table)
 
     printf("\n");
 }
-
-void ShowPlayerCards(Player* player)
+// 임시
+void ShowPlayerCards(Player* player, GameLog *log)
 {
-    printf("\n=== PLAYER CARD ===\n");
+    AddLog(log, LOG_SYSTEM, "=== PLAYER CARD ===");
 
-    for (int i = 0; i < 2; i++)
+    for (int i = 0; i < player->handCardCount; i++)
     {
         PrintCard(player->hand[i]);
 
@@ -45,11 +63,11 @@ void ShowPlayerCards(Player* player)
 }
 
 // 임시
-void ShowAICards(Player* ai) 
+void ShowAICards(Player* ai, GameLog *log)
 {
-    printf("\n=== AI CARD ===\n");
+    AddLog(log, LOG_SYSTEM, "=== AI CARD ===");
 
-    for (int i = 0; i < 2; i++)
+    for (int i = 0; i < ai->handCardCount; i++)
     {
         PrintCard(ai->hand[i]);
 
@@ -59,13 +77,13 @@ void ShowAICards(Player* ai)
     printf("\n");
 }
 
-static void PrintTableState(Player* player, Player* ai, Table* table)
+static void PrintTableState(Player* player, Player* ai, Table* table, GameLog *log)
 {
-    printf("\n[pot: %d]  [currentBet: %d]  [playerChip: %d]  [AIChip: %d]\n",
+    AddLog(log, LOG_ACTION, "[pot: %d]  [currentBet: %d]  [playerChip: %d]  [AIChip: %d]",
         table->pot, table->currentBet, player->chip, ai->chip);
 }
 
-static void Showdown(Player* player, Player* aiPlayer, Table* table)
+static void Showdown(Player* player, Player* aiPlayer, Table* table, GameLog *log)
 {
     if (player->totalBet != aiPlayer->totalBet)
     {
@@ -84,17 +102,36 @@ static void Showdown(Player* player, Player* aiPlayer, Table* table)
             table->pot -= ex;
         }
     }
-
+    // ==========================================
     // player
-    Card playerCards[7];
+    int playerTotalCards = player->handCardCount + 5;
+    Card playerCards[8];
 
-    playerCards[0] = player->hand[0];
-    playerCards[1] = player->hand[1];
+    for (int i = 0; i < player->handCardCount; i++)
+    {
+        playerCards[i] = player->hand[i];
+    }
 
-    Card aiCards[7];
+    for (int i = 0; i < 5; i++)
+    {
+        playerCards[player->handCardCount + i] = table->communityCards[i];
+    }
+    // ==========================================
+    // ai
+    int aiTotalCards = aiPlayer->handCardCount + 5;
+    Card aiCards[8];
 
-    aiCards[0] = aiPlayer->hand[0];
-    aiCards[1] = aiPlayer->hand[1];
+    for (int i = 0; i < aiPlayer->handCardCount; i++)
+    {
+        aiCards[i] = aiPlayer->hand[i];
+    }
+
+    for (int i = 0; i < 5; i++)
+    {
+        aiCards[aiPlayer->handCardCount + i] = table->communityCards[i];
+    }
+    // ==========================================
+    
 
     // 커뮤니티
     for (int i = 0; i < 5; i++)
@@ -103,22 +140,22 @@ static void Showdown(Player* player, Player* aiPlayer, Table* table)
         aiCards[i + 2] = table->communityCards[i];
     }
 
-    HandResult playerBest = FindBestHand(playerCards, 7);
-    HandResult aiBest = FindBestHand(aiCards, 7);
+    HandResult playerBest = FindBestHand(playerCards, playerTotalCards);
+    HandResult aiBest = FindBestHand(aiCards, aiTotalCards);
 
     // 족보
-    printf("\nPlayer Hand : %s\n", GetHandRankName(playerBest.rank));
-    printf("AI Hand : %s\n", GetHandRankName(aiBest.rank));
+    AddLog(log, LOG_SYSTEM, "Player Hand : %s", GetHandRankName(playerBest.rank));
+    AddLog(log, LOG_SYSTEM, "AI Hand : %s", GetHandRankName(aiBest.rank));
 
     // 승패
     int whoseWinner = CompareHands(playerBest, aiBest);
 
-    printf("\n=== RESULT ===\n");
+    AddLog(log, LOG_SYSTEM, "=== RESULT ===");
 
     // 플레이어 승리
     if (whoseWinner > 0)
     {
-        printf("PLAYER WIN!\n");
+        AddLog(log, LOG_SYSTEM, "PLAYER WIN!");
 
         player->chip += table->pot;
         if (aiPlayer->chip > 0)
@@ -134,12 +171,12 @@ static void Showdown(Player* player, Player* aiPlayer, Table* table)
     // ai 승리
     else if (whoseWinner < 0)
     {
-        printf("AI WIN!\n");
+        AddLog(log, LOG_SYSTEM, "AI WIN!");
         aiPlayer->chip += table->pot;
     }
     else
     {
-        printf("DRAW!\n");
+        AddLog(log, LOG_SYSTEM, "DRAW!");
         int split = table->pot / 2;
 
         player->chip += split;
@@ -148,8 +185,8 @@ static void Showdown(Player* player, Player* aiPlayer, Table* table)
 
     table->pot = 0;
 
-    printf("\nPlayer Chip : %d\n", player->chip);
-    printf("AI Chip : %d\n", aiPlayer->chip);
+    AddLog(log, LOG_SYSTEM, "Player Chip : %d", player->chip);
+    AddLog(log, LOG_SYSTEM, "AI Chip : %d", aiPlayer->chip);
 }
 
 static void ResetBettingRound(Player* player, Player* aiPlayer, Table* table)
@@ -172,33 +209,33 @@ static bool IsBettingFinished(Player* player, Player* aiPlayer, Table* table, bo
     return false;
 }
 
-static void ApplyAIAction(AIContext *ai, Player *aiPlayer, Table* table) 
+static void ApplyAIAction(AIContext *ai, Player *aiPlayer, Table* table, GameLog *log) 
 {
     switch (ai->selectedAction)
     {
     case ACTION_FOLD:
-        Fold(aiPlayer);
+        Fold(aiPlayer, log);
         break;
 
     case ACTION_CHECK:
-        Check(aiPlayer, table);
+        Check(aiPlayer, table, log);
         break;
 
     case ACTION_CALL:
-        Call(aiPlayer, table);
+        Call(aiPlayer, table, log);
         break;
 
     case ACTION_RAISE:
-        Bet(aiPlayer, table, ai->raiseAmount);
+        Bet(aiPlayer, table, ai->raiseAmount, log);
         break;
 
     case ACTION_ALL_IN:
-        AllIn(aiPlayer, table);
+        AllIn(aiPlayer, table, log);
         break;
     }
 }
 
-static bool BettingPhase(Player* player, Player* aiPlayer, AIContext* ai, Table* table, Deck* deck)
+static bool BettingPhase(Player* player, Player* aiPlayer, AIContext* ai, Table* table, Deck* deck, GameLog *log)
 {
     if (player->isFold)
     {
@@ -219,7 +256,7 @@ static bool BettingPhase(Player* player, Player* aiPlayer, AIContext* ai, Table*
 
     while (1)
     {
-        ActionType playerAction = PlayerTurn(player, table);
+        ActionType playerAction = PlayerTurn(player, aiPlayer, table, deck, log);
 
         if (playerAction == ACTION_FOLD)
         {
@@ -228,8 +265,8 @@ static bool BettingPhase(Player* player, Player* aiPlayer, AIContext* ai, Table*
             return false;
         }
 
-        UpdateAI(ai, aiPlayer, table, deck, playerAction);
-        ApplyAIAction(ai, aiPlayer, table);
+        UpdateAI(ai, aiPlayer, table, deck, playerAction, log);
+        ApplyAIAction(ai, aiPlayer, table, log);
 
         if (aiPlayer->isFold)
         {
@@ -247,7 +284,7 @@ static bool BettingPhase(Player* player, Player* aiPlayer, AIContext* ai, Table*
     return true;
 }
 
-void PlayRound(Player *player, Player *aiplayer, AIContext *ai)
+void PlayRound(Player *player, Player *aiplayer, AIContext *ai, GameLog *log)
 {
     Deck deck;
     Table table;
@@ -255,90 +292,110 @@ void PlayRound(Player *player, Player *aiplayer, AIContext *ai)
     InitializeDeck(&deck);
     ShuffleDeck(&deck);
     InitializeTable(&table);
-
+    
     // 라운드 초기화
     player->isFold = false;
     aiplayer->isFold = false;
     player->totalBet = 0;
     aiplayer->totalBet = 0;
-
+    player->hasUsedCardSwap = false;
+    
     //카드 배분
     DealCards(&deck, player);
     DealCards(&deck, aiplayer);
     SetCommunityCards(&deck, &table);
 
     SetBlind(player, aiplayer, &table, 10);
-    PrintTableState(player, aiplayer, &table);
-    ShowPlayerCards(player);
+    AddLog(log, LOG_ACTION, "<======= PLAYER TURN =======>");
+    AddLog(log, LOG_ACTION, "[내 칩: %d]  [내 누적 베팅: %d]  [콜 기준 : %d]  [팟: %d]",
+        player->chip, player->totalBet, table.currentBet, table.pot);
 
+    AddLog(log, LOG_ACTION, "1. Fold");
+    AddLog(log, LOG_ACTION, "2. Call");
+    AddLog(log, LOG_ACTION, "3. Raise (현재 기준 %d 초과로 입력)", table.currentBet);
+    AddLog(log, LOG_ACTION, "4. Check");
+    AddLog(log, LOG_ACTION, "5. All In");
+    if (gInventory.isMoreCard)
+    {
+        AddLog(log, LOG_ACTION, "6. Change Card");
+    }
 
+    ProcessVIPTable(&table);
 
-    printf("\n=== PRE FLOP ===\n");
-    if (!BettingPhase(player, aiplayer, ai, &table, &deck)) return;
+    RenderGame(player, aiplayer, &table, log);
+    PrintTableState(player, aiplayer, &table, log);    
+    AddLog(log, LOG_SYSTEM, "<======= PRE FLOP =======>");
+    if (!BettingPhase(player, aiplayer, ai, &table, &deck, log)) return;
+    
 
     /*
         FLOP
     */
     ResetBettingRound(player, aiplayer, &table);
-    printf("\n=== FLOP ===\n");
-    PrintTableState(player, aiplayer, &table);
-
-    RevealFlop(&table);
-    ShowCommunityCards(&table);
-    PrintTableState(player, aiplayer, &table);
-    if (!BettingPhase(player, aiplayer, ai, &table, &deck)) return;
+    if(!gInventory.isVIPTable) RevealFlop(&table);
+    RenderGame(player, aiplayer, &table, log);
+    AddLog(log, LOG_SYSTEM, "<======= FLOP =======>");
+    /*PrintTableState(player, aiplayer, &table, log);*/
+    if (!BettingPhase(player, aiplayer, ai, &table, &deck, log)) return;
 
     /*
         TURN
     */
     ResetBettingRound(player, aiplayer, &table);
-    printf("\n=== TURN ===\n");
-
-    RevealTurn(&table);
-    ShowCommunityCards(&table);
-    PrintTableState(player, aiplayer, &table);
-    if (!BettingPhase(player, aiplayer, ai, &table, &deck)) return;
+    if (!gInventory.isVIPTable)RevealTurn(&table);
+    RenderGame(player, aiplayer, &table, log);
+    AddLog(log, LOG_SYSTEM, "<======= TURN =======>");
+    /*PrintTableState(player, aiplayer, &table, log);*/
+    if (!BettingPhase(player, aiplayer, ai, &table, &deck, log)) return;
 
     /*
         RIVER
     */
     ResetBettingRound(player, aiplayer, &table);
-    printf("\n=== RIVER ===\n");
+    if (!gInventory.isVIPTable)RevealRiver(&table);
+    RenderGame(player, aiplayer, &table, log);
+    AddLog(log, LOG_SYSTEM, "<======= RIVER =======>");
+    /*PrintTableState(player, aiplayer, &table, log);*/
+    if (!BettingPhase(player, aiplayer, ai, &table, &deck, log)) return;
 
-    RevealRiver(&table);
-    ShowCommunityCards(&table);
-    PrintTableState(player, aiplayer, &table);
-    if (!BettingPhase(player, aiplayer, ai, &table, &deck)) return;
     /*
         쇼다운
     */
-    printf("\n=== SHOWDOWN ===\n");
+    RenderGame(player, aiplayer, &table, log);
+    AddLog(log, LOG_SYSTEM, "<======= SHOWDOWN =======>");
 
-    ShowAICards(aiplayer);
-    Showdown(player, aiplayer, &table);
+    ShowAICards(aiplayer, log);
+    Showdown(player, aiplayer, &table, log);
+    RenderGameReveal(player, aiplayer, &table, log);
+    printf("아무 키나 눌러 넘기기.\n");
+    WaitAnyKey();
 }
 
-static ActionType PlayerTurn(Player* player, Table* table)
+static ActionType PlayerTurn(Player* player, Player *aiPlayer, Table* table, Deck* deck, GameLog *log)
 {
     int choice;
 
     while (1)
     {
-        printf("\n=== PLAYER TURN ===\n");
-        printf("[내 칩: %d]  [내 누적 베팅: %d]  [콜 기준 : %d]  [팟: %d]\n",
+        AddLog(log, LOG_ACTION, "<======= PLAYER TURN =======>");
+        AddLog(log, LOG_ACTION, "[내 칩: %d]  [내 누적 베팅: %d]  [콜 기준 : %d]  [팟: %d]",
             player->chip, player->totalBet, table->currentBet, table->pot);
 
-        printf("1. Fold\n");
-        printf("2. Call\n");
-        printf("3. Raise (현재 기준 %d 초과로 입력)\n", table->currentBet);
-        printf("4. Check\n");
-        printf("5. All In\n");
+        AddLog(log, LOG_ACTION, "1. Fold");
+        AddLog(log, LOG_ACTION, "2. Call");
+        AddLog(log, LOG_ACTION, "3. Raise (현재 기준 %d 초과로 입력)", table->currentBet);
+        AddLog(log, LOG_ACTION, "4. Check");
+        AddLog(log, LOG_ACTION, "5. All In");
+        if (gInventory.isMoreCard)
+        {
+            AddLog(log, LOG_ACTION, "6. Change Card");
+        }
 
         int needChip = table->currentBet - player->totalBet; // 0 - 40
 
         if (scanf_s("%d", &choice) != 1)
         {
-            printf("\n잘못된 입력입니다.\n");
+            AddLog(log, LOG_SYSTEM, "잘못된 입력입니다.");
 
             while (getchar() != '\n');
 
@@ -349,32 +406,32 @@ static ActionType PlayerTurn(Player* player, Table* table)
         {
         case 1: // Fold
 
-            Fold(player);
+            Fold(player, log);
             return ACTION_FOLD;
 
         case 2: // Call
         {
             if (needChip <= 0)
             {
-                printf("\nAlready Call State (Pls Action:Check)\n");
+                AddLog(log, LOG_SYSTEM, "Already Call State (Pls Action:Check)");
 
                 continue;
             }
 
-            Call(player, table);
+            Call(player, table, log);
 
-            printf("\nPLAYER CALL : %d\n", needChip);
+            AddLog(log, LOG_SYSTEM, "PLAYER CALL : %d", needChip);
             return ACTION_CALL;
         }
 
         case 3: // raise
         {
             int target;
-            printf("\n레이즈 목표 총액(절대값, 현재 기준 %d 초과): ", table->currentBet);
+            AddLog(log, LOG_SYSTEM, "레이즈 목표 총액(절대값, 현재 기준 %d 초과): ", table->currentBet);
 
             if (scanf_s("%d", &target) != 1)
             {
-                printf("\n잘못된 입력입니다.\n");
+                AddLog(log, LOG_ACTION, "잘못된 입력입니다.");
 
                 while (getchar() != '\n');
                 continue;
@@ -382,69 +439,115 @@ static ActionType PlayerTurn(Player* player, Table* table)
 
             if (target <= table->currentBet)
             {
-                printf("\n현재 베팅(%d)보다 큰 값을 입력해야 합니다.\n", table->currentBet);
+                AddLog(log, LOG_SYSTEM, "현재 베팅(%d)보다 큰 값을 입력해야 합니다.", table->currentBet);
                 continue;
             }
 
-            Bet(player, table, target);
+            Bet(player, table, target, log);
             return ACTION_RAISE;
         }
 
-        case 4: // check
+        case 4: // check 
+            // 초기 상태  // currnetBet  = 10 //totalbet = 0 // <- 체크 오류
 
-            if (table -> currentBet <= player -> totalBet)
+            if (table -> currentBet < player -> totalBet)
             {
-                printf("\n체크할 수 없습니다.\n");
+                AddLog(log, LOG_ACTION, "체크할 수 없습니다.");
                 continue;
             }
 
-            Check(player, table);
-            printf("\n[system] 플레이어가 체크했습니다. PLAYER CHECK\n");
-
-            return ACTION_CHECK;
+            if (Check(player, table, log))
+            {
+                AddLog(log, LOG_SYSTEM, "[system] 플레이어가 체크했습니다. PLAYER CHECK");
+                return ACTION_CHECK;
+            }
+            else continue;
 
         case 5:
-            AllIn(player, table);
+            AllIn(player, table, log);
             return ACTION_ALL_IN;
+        case 6:
 
-        default:
-            printf("\n잘못된 입력입니다.\n");
+            if (!gInventory.isMoreCard)
+            {
+                AddLog(log, LOG_SYSTEM, "아이템이 없습니다.");
+                continue;
+            }
+            if (player->hasUsedCardSwap)
+            {
+                AddLog(log, LOG_SYSTEM, "이번 라운드에 이미 카드 교체를 사용했습니다.");
+                continue;
+            }
+            OpenCardSwapMenu(player, table, deck);
+            player->hasUsedCardSwap = true;
+            RenderGame(player, aiPlayer, table, log);
+            AddLog(log, LOG_SYSTEM, "카드 변경 완료.");
             continue;
 
         }
     }
 }
 
+// 함수의 스택이 경고 수준에 이를 정도로 가득 찼는데, 이건 어떻게 해결하면...
+// 기능을 분리?
+// 일단은 터지지 않을 정도로만 만들어두자.
 void RunPokerGame()
 {
+
     Player player;
     Player aiPlayer;
     AIContext ai;
-
-    InitializePlayer(&player);
-    InitializePlayer(&aiPlayer);
-    InitializeAI(&ai);
+    GameLog log;
 
     player.aiLevel = 0;
-    aiPlayer.aiLevel = 1;
-
-    while(player.chip > 0 && aiPlayer.chip > 0)
+    player.LIFE = 5;
+    InitializeCurrency();
+    InitializeAudio(true);
+    
+    while (1) 
     {
-        PlayRound(&player, &aiPlayer, &ai);
-    }
+        InitializePlayer(&player);
+        InitializePlayer(&aiPlayer);
+        InitializeAI(&ai);
+        InitializeLog(&log);
+        
+        aiPlayer.aiLevel = 1;
 
-    printf("\n=== GAME END ===\n");
+        while (player.chip > 0 && aiPlayer.chip > 0)
+        {
+            PlayRound(&player, &aiPlayer, &ai, &log);
+        }
 
-    if (player.chip <= 0)
-    {
-        printf("AI WIN FINAL\n");
-    }
-    else
-    {
-        printf("PLAYER WIN FINAL\n");
+        AddLog(&log, LOG_SYSTEM, "<======= GAME END =======>");
 
-        printf("Earn Coin : %d\n", player.chip);
-        //TODO : 코인 시스템 구현하기
+        if (player.chip <= 0)
+        {
+            AddLog(&log, LOG_SYSTEM, "AI WIN FINAL");
+
+            if(player.LIFE <= 0)
+            {
+                AddLog(&log, LOG_SYSTEM, "GAME OVER");
+            
+                exit(1);
+			}
+            else 
+            {
+                player.LIFE--;
+            }
+            
+            PlaySFX(SOUND_LOSE);
+        }
+        else
+        {
+            AddLog(&log, LOG_SYSTEM, "PLAYER WIN FINAL");
+
+            AddCoin(100);
+
+            AddLog(&log, LOG_SYSTEM, "Earn Coin : %d", player.chip);
+            AddLog(&log, LOG_SYSTEM, "Current Coin : %d", gCoin.coin);
+
+            OpenShop();
+        }
     }
 }
 

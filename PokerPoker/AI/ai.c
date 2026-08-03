@@ -69,6 +69,12 @@ ActionType DecideAIAction(AIContext* ai, Player* aiPlayer, Table* table, Deck* d
 
     if (playerAction == ACTION_ALL_IN) 
     { 
+        if (aiPlayer->chip <= 0)
+        {
+            ai->selectedAction = ACTION_FOLD;
+            return ACTION_FOLD;
+        }
+
         ai->selectedAction = ACTION_ALL_IN;
         return ACTION_ALL_IN; 
     }
@@ -90,7 +96,31 @@ ActionType DecideAIAction(AIContext* ai, Player* aiPlayer, Table* table, Deck* d
         }
     }
 
-    if (P >= 70.0f)
+    if (playerAction == ACTION_RAISE)
+    {
+        if (P < 45.0f)
+        {
+            ai->selectedAction = ACTION_CALL;
+
+            return ACTION_CALL;
+        }
+
+        if (randomValue < 40)
+        {
+            ai->selectedAction = ACTION_FOLD;
+
+            return ACTION_FOLD;
+        }
+
+        if (randomValue < 15)
+        {
+            ai->selectedAction = ACTION_ALL_IN;
+
+            return ACTION_ALL_IN;
+        }
+    }
+
+    if (P >= 60.0f)
     {
         if (aiPlayer->aiLevel >= 3)
         {
@@ -183,34 +213,28 @@ ActionType DecideAIAction(AIContext* ai, Player* aiPlayer, Table* table, Deck* d
     return ACTION_FOLD;
 }
 
-void ExecuteAIAction(AIContext* ai, Player* aiPlayer, Table* table)
-{
-    if (ai == NULL) return;
+void ExecuteAIAction(AIContext* ai, Player* aiPlayer, Table* table, GameLog* log) {
+    if (ai == NULL)      return;
     if (aiPlayer == NULL) return;
-    if (table == NULL) return;
+    if (table == NULL)   return;
 
     ai->state = AI_ACT;
 
-    switch (ai->selectedAction)
-    {
+    switch (ai->selectedAction) {
     case ACTION_FOLD:
-        printf("\n[AI] Fold\n");
+        AddLog(log, LOG_SYSTEM, "[AI] Fold");
         break;
-
     case ACTION_CALL:
-        printf("\n[AI] Call\n");
+        AddLog(log, LOG_SYSTEM, "[AI] Call");
         break;
-
     case ACTION_CHECK:
-        printf("\n[AI] Check\n");
+        AddLog(log, LOG_SYSTEM, "[AI] Check");
         break;
-
     case ACTION_RAISE:
-        printf("\n[AI] Raise\n");
+        AddLog(log, LOG_SYSTEM, "[AI] Raise");
         break;
-
     case ACTION_ALL_IN:
-        printf("\n[AI] ALL IN !!!\n");
+        AddLog(log, LOG_SYSTEM, "[AI] ALL IN !!!");
         break;
     }
 

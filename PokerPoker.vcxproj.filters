@@ -30,9 +30,6 @@
     <ClCompile Include="PokerPoker\system\console.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="PokerPoker\system\renderer.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="PokerPoker\ui\main_system_ui.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -75,6 +72,42 @@
     <ClCompile Include="PokerPoker\AI\ai_update.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="PokerPoker\renderer\renderer.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="PokerPoker\renderer\card_renderer.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="PokerPoker\renderer\screen_buffer.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="PokerPoker\renderer\table_renderer.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="PokerPoker\shop\shop.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="PokerPoker\system\game_log.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="PokerPoker\renderer\log_renderer.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="PokerPoker\audio\audio.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="PokerPoker\shop\shop_inventory.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="PokerPoker\shop\shop_effect.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="PokerPoker\shop\coin.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="PokerPoker\game\card_swap.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="PokerPoker\core\game.h">
@@ -87,9 +120,6 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="PokerPoker\system\console.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="PokerPoker\system\renderer.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="PokerPoker\resource\logo.h">
@@ -147,6 +177,51 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="PokerPoker\AI\ai_update.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="PokerPoker\renderer\renderer.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="PokerPoker\renderer\screen_buffer.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="PokerPoker\renderer\card_renderer.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="PokerPoker\renderer\table_renderer.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="PokerPoker\shop\shop.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="PokerPoker\shop\item.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="PokerPoker\system\game_log.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="PokerPoker\renderer\log_renderer.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="PokerPoker\enum\log_type.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="PokerPoker\audio\audio.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="PokerPoker\audio\sound_type.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="PokerPoker\shop\shop_inventory.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="PokerPoker\shop\shop_effect.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="PokerPoker\shop\coin.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="PokerPoker\game\card_swap.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

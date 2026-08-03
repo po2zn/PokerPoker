@@ -10,6 +10,7 @@
 #include "../enum/action_type.h"
 #include "../enum/ai_state.h"
 
+#include "../system/game_log.h"
 
 typedef struct AIContext
 {
@@ -29,6 +30,6 @@ float CalculateWinRate(Player* aiPlayer, Table* table, Deck* deck);
 
 ActionType DecideAIAction(AIContext* ai, Player* aiPlayer, Table* table, Deck *deck, int playerAction);
 
-void ExecuteAIAction(AIContext* ai, Player* aiPlayer, Table* table);
+void ExecuteAIAction(AIContext* ai, Player* aiPlayer, Table* table, GameLog *log);
 
 #endif

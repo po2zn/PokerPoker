@@ -6,13 +6,15 @@
 #include "../data/table.h"
 #include "../ai/ai.h"
 
-void ShowCommunityCards(Table* table);
+#include "../system/game_log.h"
 
-void ShowPlayerCards(Player* player);
+void ShowCommunityCards(Table* table, GameLog* log);
 
-void ShowAICards(Player* ai);
+void ShowPlayerCards(Player* player, GameLog* log);
 
-void PlayRound(Player* player, Player* aiplayer, AIContext* ai);
+void ShowAICards(Player* ai, GameLog* log);
+
+void PlayRound(Player* player, Player* aiplayer, AIContext* ai, GameLog *log);
 
 void RunPokerGame();
 

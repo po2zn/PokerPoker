@@ -92,9 +92,7 @@ float CalculateWinRate(Player* aiPlayer, Table* table, Deck* deck)
 
             for (int j = 0; j < 52; j++)
             {
-                if (IsSameCard(
-                    deck->cards[j],
-                    table->communityCards[i]))
+                if (IsSameCard(deck->cards[j], table->communityCards[i]))
                 {
                     used[j] = true;
                 }
@@ -118,8 +116,8 @@ float CalculateWinRate(Player* aiPlayer, Table* table, Deck* deck)
         }
 
 
-        HandResult aiResult = EvaluateHand(aiCards, 7);
-        HandResult enemyResult = EvaluateHand(enemyCards, 7);
+        HandResult aiResult = FindBestHand(aiCards, 7);
+        HandResult enemyResult = FindBestHand(enemyCards, 7);
 
         int compare = CompareHandResult(aiResult, enemyResult);
 

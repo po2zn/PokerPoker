@@ -84,14 +84,8 @@ static bool IsRoyalFlush(Card cards[], int cardCount)
 
     for (int suit = 0; suit < 4; suit++)
     {
-        if
-            (
-                suitCount[suit][10] &&
-                suitCount[suit][11] &&
-                suitCount[suit][12] &&
-                suitCount[suit][13] &&
-                suitCount[suit][14]
-                )
+        if(suitCount[suit][10] && suitCount[suit][11] && suitCount[suit][12] && 
+            suitCount[suit][13] && suitCount[suit][14])
         {
             return true;
         }
@@ -156,7 +150,7 @@ HandResult EvaluateHand(Card cards[], int cardCount)
     bool four = false;
 
     int pairCount = 0;
-
+    
     // Á·º¸ Å½»ö
     for (int i = 14; i >= 2; i--)
     {
